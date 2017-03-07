@@ -1,0 +1,48 @@
+.comment {
+    //background: lighten(yellow, 45%);
+    position: relative;
+    background:  darken($white, 12%);
+    margin-bottom: 2px;
+    min-height: 115px;  
+   // @include clearfix;
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: -44px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 44px 44px 0;
+        border-color: transparent darken($white, 12%) transparent transparent;
+    }
+    p {
+        //font-size: 16px;
+        color: lighten($black, 25%);
+        font-family: "Lato", sans-serif;
+    }
+    a {
+        color: $orange;
+    }
+    hr {
+        margin: $padding 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0 0 $spacer $spacer*2;
+        padding: 0;
+        float: right;
+        li {
+            margin-bottom: 2px;
+            a {
+                background: rgba($blue, 0.5);
+                padding: $padding;
+                display: block;
+                width: 54px;
+                color: $white;
+            }
+        }
+    }
+    
+}

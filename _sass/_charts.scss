@@ -1,0 +1,53 @@
+// charts and graphs
+
+.chart-wrapper {
+    position: relative;
+    height: 250px;
+}
+
+.chart {
+    position: relative;
+    &.pie {
+        position: relative;
+        border: 5vw solid $green;
+        width: calc(100% - #{$padding * 2});
+        border-radius: 100%;
+        border-top-color: darken($green, 8%);
+        border-left-color: darken($green, 16%);
+        padding: $padding;
+        margin: 0 auto;
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+        &.alt {
+            border-color: $pink;
+            border-top-color: darken($pink, 8%);
+            border-left-color: darken($pink, 16%);
+            transform: rotate(90deg);
+        }
+    }
+    &.bar {
+        position: relative;
+        height: calc(25% - 8px);
+        margin-bottom: 8px;
+        border-radius: 2px;
+        background: $blue;
+        width: 100%;
+        &:nth-child(2) {
+            background: lighten($blue, 8%);
+        }
+        &:nth-child(3) {
+            background: lighten($blue, 16%);
+        }
+        &:nth-child(4) {
+            background: lighten($blue, 24%);
+        }
+        &.vert {
+            width: calc(25% - 8px);
+            margin-right: 4px;
+            display: inline-block;
+        }
+    }
+}

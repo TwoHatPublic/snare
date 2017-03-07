@@ -1,0 +1,47 @@
+.container {
+    position: relative;
+    z-index: 1; 
+    padding: $padding*2;
+    max-width: 1600px;
+    margin: 0 auto;
+    @media screen and (min-width: $mobileMajor) {
+        padding: $padding*3 $padding*5 $padding*5;
+    }
+}
+
+.row {
+    @media screen and (min-width: $mobileMajor) { 
+        display: flex;
+        align-items: flex-start;
+        flex-flow: row wrap;
+        //align-content: center;
+        //justify-content: flex-start;
+        justify-content: space-between;
+    }
+    
+    [class*="col"] {
+        position: relative;
+        margin-bottom: $spacer;
+        width: 100%;
+        &.center {
+            text-align: center; 
+            //margin: 0 auto $padding*4;
+        }
+        @media screen and (max-width: $mobileMajor) {
+            padding: $padding/2 0;
+        }
+    }
+    
+    @for $i from 1 through 12 {
+        [class*="col-#{$i}"] {
+            @media screen and (min-width: $mobileMajor) { 
+                width: calc(#{100% / (12/$i)} - #{$spacer});
+            }
+        }
+        [class*="offset-#{$i}"] {
+            @media screen and (min-width: $mobileMajor) { 
+                margin-left: calc(#{$spacer/2} + #{(100% / (12/$i))});
+            }
+        }
+    }
+}

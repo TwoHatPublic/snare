@@ -1,0 +1,27 @@
+footer {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: $spacer * 2;
+    background: darken($black, 18%);
+    color: darken($white, 60%);
+    section {
+        background: transparent;
+    }
+    h3 {
+        font-weight: 400;
+    }
+    hr {
+        border-bottom: 2px solid rgba($white, 0.2);
+    }
+    a {
+        color: rgba(yellow, 0.4);
+    }
+    .button {
+        background: transparent;
+        border: 2px solid $white;
+        padding-left: $padding;
+        padding-right: $padding;
+        //display: block;
+    }
+}

@@ -1,0 +1,138 @@
+// stuff you click and tap (ui)
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    //border: 4px solid $orange;
+    background: darken($black, 18%);
+    padding: 12px;
+    float: left;
+    margin-top: 22px;
+    
+}
+.button, button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: $padding/8 $padding;
+    border: none;
+    border-radius: 1px;
+    background: $green;
+    color: $white;
+    text-transform: uppercase;
+    min-height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 260ms ease-in-out;
+    font-family: 'mission_gothicregular';
+    &:hover {
+        background: darken($green, 15%);
+    }
+    &:focus, &:active {
+        outline: none;
+        background: darken($green, 15%);
+    } 
+}
+.loading {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: 6px solid rgba($blue, 0.25);
+    border-right: 6px solid $blue;
+    border-radius: 100%;
+    margin: 0 auto;
+    animation: spin 500ms infinite linear;
+}
+@keyframes spin {
+  0%   { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+} 
+.output > div {
+    text-align: center;
+    padding: 8px;
+    background: rgba($black, 0.05);
+    margin-bottom: 8px;
+}
+
+.tag {
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 4px 4px 4px 8px;
+    background: #ccc;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    font-family: 'mission_gothicregular';
+    color: $white;
+    span {
+        padding: 4px;
+        margin-left: 4px;
+        display: inline-block;
+        background: darken(#ccc, 15%);
+    }
+    &.mild {
+        font-size: 1.5em;
+        background: $yellow-dark;
+        span {
+            background: darken($yellow-dark, 8%);
+        }
+    }    
+    &.strong {
+        font-size: 1.5em;
+        background: $orange;
+        span {
+            background: darken($orange, 8%);
+        }
+    }
+    &.severe {
+        font-size: 2em;
+        background: $red;
+        span {
+            background: darken($red, 8%);
+        }
+    }
+    &.possible {
+        font-size: 1em;
+        color: $black;
+    }
+    &.safe {
+        color: $green;
+        background: none;
+        span {
+            display: none;
+        }
+    }
+/*
+    &.vulgar {
+        background: rgba($green, 0.25);
+        color: darken($green, 15%);
+        span {
+            background: rgba($green, 0.5);
+        }
+    }
+    &.sexting {
+        background: rgba($orange, 0.25);
+        color: darken($orange, 15%);
+        span {
+            background: rgba($orange, 0.5);
+        }
+    }
+    &.bullying {
+        background: rgba($pink, 0.25);
+        color: darken($pink, 15%);
+        span {
+            background: rgba($pink, 0.5);
+        }
+    }
+    &.racism {
+        background: rgba($blue, 0.25);
+        color: darken($blue, 15%);
+        span {
+            background: rgba($blue, 0.5);
+        }
+    }
+*/
+}

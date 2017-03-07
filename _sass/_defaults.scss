@@ -1,0 +1,101 @@
+// defaults
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    background: $white;
+    color: $black;
+    font-family: "mission_gothicblack";
+    font-weight: 400;
+    font-size: 0.825em;
+    text-rendering: optimizeLegibility;  
+    @media screen and (min-width: $laptop) {
+        font-size: 1em;
+    }
+}
+section {
+    position: relative;
+    z-index: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2125em;
+    font-family: 'mission_gothicregular';
+    @media screen and (min-width: $mobileMajor) {
+        &.huge {
+            font-size: 3em;
+            font-weight: 900;
+            padding-top: $padding/2;
+        }
+        &.med {
+            font-size: 2em;
+            font-weight: 400;
+            line-height: 1.25em;
+            margin-bottom: $spacer;
+        }
+    }
+    
+}
+h1 {
+    position: relative;
+    
+}
+h2 {
+    line-height: 1.3em;
+    margin: 0 0 $padding;
+    
+}
+h3 {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 0 0 $padding;
+    font-family: 'mission_gothicblack';
+}
+h4 {
+    font-size: 1.1em;
+    line-height: 1.65em;
+    margin: 0 0 $padding;
+}
+p {
+    line-height: 1.65em;
+    margin: 0 0 $padding;
+}
+a {
+    color: $orange;
+    text-decoration: none;
+}
+article {
+    display: block;
+    position: relative;
+    p {
+        font-size: 1.15em;
+        font-family: "lora", serif;
+    }
+    h3 {
+        font-weight: 700;
+    }
+    figure {
+        margin-bottom: $padding*2;
+        border-top: 8px solid rgba(yellow, 0.4);
+    }
+    hr {
+        border-bottom: 1px dotted $black;
+    }
+}
+mark {
+    color: darken($black, 15%);
+    background: rgba(yellow, 0.4);
+    padding: 5px;
+}
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: none;
+    margin: $spacer*4 0;
+    border-bottom: 1px dotted rgba($black, 0.4);
+}

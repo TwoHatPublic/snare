@@ -1,0 +1,87 @@
+// bring my fonts
+@import "/assets/css/fonts/stylesheet.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "compass";
+
+
+//
+// JESSE KORZAN 2017
+// emptycan.com
+//
+// support: jesse@emptycan.com
+
+
+
+// vars
+
+// breakpoints ("You're sayin' the FBI's gonna pay me to learn to surf?")
+
+$mobileMajor : "767px";
+$laptop : "1200px";
+
+// margins, padding, gutters, etc
+$spacer : 1em;
+$padding : $spacer;
+
+// colours
+/*
+$white : #fff;
+$black : #4d4e44; //#595D5F;
+$green : #11d395;
+$blue : #00AFFF;
+$orange : #e2060c;
+$pink : #c10259;
+*/
+
+$white : #FFFFFF;
+$black : #4B5C64; //#595D5F;
+$black-light : #95989A;
+$black-lighter : lighten($black-light, 20%);
+$blue :  #15b9d2; //#3FB8AF;
+$blue-light: #C6D9DD;
+$yellow : #f8f19b;
+$yellow-dark: #f3c903;
+$orange : #f37f03;
+$green : #10b304;
+$green-light: #97F2C1;
+$lime : #CBE62B;
+$red: #E02706;
+$red-light: #F2A597;
+$pink : #c10259;
+
+// golden ratio (if you like this sort of thing)
+$golden:	1.618;
+$base:	100%;
+$gld10:	$base / $golden;
+$gld9:	$base - $gld10;
+$gld8:	$gld9 / $golden;
+$gld7:	$gld9 - $gld8;
+$gld6:	$gld7 / $golden;
+$gld5:	$gld7 - $gld6;
+$gld4:	$gld5 / $golden;
+$gld3:	$gld5 - $gld4;
+$gld2:	$gld3 / $golden;
+$gld1:	$gld3 - $gld2;
+
+
+// modules and components
+
+@import "defaults"; // body, basic typogprahy & selectors
+@import "grid"; // .row and .col
+@import "nav"; // global nav bar
+@import "cards"; // cards (within .row)
+@import "footer"; // page footer styles
+@import "blocks"; // .feature, .hero, etc page layout classes & styles
+@import "ui"; // buttons & ui
+@import "utilities"; // helper classes, general purpose
+@import "canvas";
+@import "forms";
+//@import "timer"; // timer animation
+//@import "charts"; // charts & graphs
+//@import "comments"; // comments on posts
+
+
+
+
+
+
